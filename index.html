@@ -1,1 +1,98 @@
 
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Video Studio</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#10101c;color:white;font-family:Arial,sans-serif}
+header{padding:20px;background:#19192b;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:21px;font-weight:bold;color:#a78bfa}
+button{border:0;padding:12px 18px;border-radius:9px;background:#8055ed;color:white;font-weight:bold}
+.hero{text-align:center;padding:55px 18px 30px}
+.hero h1{font-size:34px;margin-bottom:12px}
+.hero h1 span{color:#a78bfa}
+.hero p{color:#bbb;line-height:1.6}
+.container{max-width:650px;margin:20px auto;padding:20px}
+.panel{background:#1b1b2e;padding:22px;border-radius:15px;border:1px solid #35354c}
+label{display:block;margin:17px 0 9px}
+select,textarea{width:100%;padding:14px;background:#10101c;color:white;border:1px solid #44445c;border-radius:9px;font-size:15px}
+textarea{height:130px;resize:vertical}
+.generate{width:100%;margin-top:20px;font-size:16px}
+.info{color:#aaa;font-size:13px;line-height:1.6}
+footer{text-align:center;color:#999;padding:30px}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">✨ AI VIDEO STUDIO</div>
+<button onclick="alert('Premium features coming soon!')">Premium</button>
+</header>
+
+<section class="hero">
+<h1>Create Videos with <span>AI</span></h1>
+<p>Apni script likho aur apne ideas ko video mein badalne ki shuruaat karo.</p>
+</section>
+
+<div class="container">
+<div class="panel">
+<h2>🎬 Create Your Video</h2>
+
+<label>Video Category</label>
+<select id="category">
+<option>Bhakti Video</option>
+<option>Cartoon Animation</option>
+<option>Story Video</option>
+<option>Educational Video</option>
+<option>Motivational Video</option>
+<option>Short Video</option>
+<option>Other</option>
+</select>
+
+<label>Video Style</label>
+<select id="style">
+<option>3D Animation</option>
+<option>Realistic</option>
+<option>Anime</option>
+<option>Cartoon</option>
+<option>Cinematic</option>
+</select>
+
+<label>Apni Video Script Likho</label>
+<textarea id="script" placeholder="Yahan apni video ki poori script likho..."></textarea>
+
+<label>Video Duration</label>
+<select id="duration">
+<option>30 Seconds</option>
+<option>1 Minute</option>
+<option>3 Minutes</option>
+<option>5 Minutes</option>
+<option>10 Minutes</option>
+</select>
+
+<button class="generate" onclick="preview()">Create Video ✨</button>
+
+<p class="info">Yeh abhi website ka initial demo interface hai. AI video generation engine agle steps mein connect hoga.</p>
+<div id="result"></div>
+</div>
+</div>
+
+<footer>© 2026 AI Video Studio | Create Something Amazing</footer>
+
+<script>
+function preview(){
+let script=document.getElementById('script').value;
+if(!script.trim()){
+alert('Please enter your video script!');
+return;
+}
+document.getElementById('result').innerHTML=
+'<h3>✅ Script Received!</h3><p>Category: '+document.getElementById('category').value+
+'</p><p>Your video project is ready for the next setup step.</p>';
+}
+</script>
+</body>
+</html>
+
